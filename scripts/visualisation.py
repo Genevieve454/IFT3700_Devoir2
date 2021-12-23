@@ -37,7 +37,7 @@ def pca_en_2D(donnees):
     plt.show()
 
 
-# pca_en_2D(X)
+pca_en_2D(X)
 
 def pca_en_5D(donnees):
     model = PCA(n_components=5)
