@@ -1,17 +1,11 @@
 from pomegranate import BayesianNetwork, DiscreteDistribution, ConditionalProbabilityTable, Node
-import numpy as np
 import pandas as pd
 import json
 from matplotlib import pyplot as plt
-import pygraphviz as pgv
 
 donnees_C = pd.read_csv('../data/dataC.csv')
 donnees_C = donnees_C.drop(columns=['DisplayName'])
 colonnes = list(donnees_C)
-
-liste_colonnes_utilises = []
-
-# BayesianNetwork.from_samples()
 
 with open("../data/ordre.json") as fichier:
     ordre = json.load(fichier)
@@ -60,7 +54,6 @@ def hasParentNotProcessed(columnNum, _max_corr):
 def buildCorrelationTree(_ordre, _max_corr, _tree=[]):
     for columnNum in _ordre:
 
-        # don't process those who are now a children of another
         if _max_corr[columnNum] != -1 and not hasParentNotProcessed(columnNum, _max_corr):
             node = TreeNode(columnNum, [])
             addChildCorrelation(node, columnNum, _max_corr)
@@ -72,27 +65,21 @@ def buildCorrelationTree(_ordre, _max_corr, _tree=[]):
 tree = buildCorrelationTree(ordre, max_corr)
 
 
-# to test the tree with an output
-def printTree(_tree, space=""):
-    for _treeNode in _tree:
-        print(space + str(_treeNode.columnNum))
-        if len(_treeNode.children) > 0:
-            for _node in _treeNode.children:
-                printTree([_node], space + "  ")
-
-
-printTree(tree)
-
-
 def buildSubProbabilityTable(_node, _parentNode, _parentBayesianNode, _network, distribution):
 
-    # We don't need to build a real probability table to show the diagram
-    cp = ConditionalProbabilityTable(
-        [[False, False, 0.95],
-         [False, True, 0.05],
+    nbRows = len(donnees_C)
+    nbNonZeroA = donnees_C[colonnes[_node.columnNum]].astype(bool).sum(axis=0)
+    nbZeroA = nbRows - nbNonZeroA
 
-         [True, False, 0.1],
-         [True, True, 0.9],
+    nbNonZeroB = donnees_C[colonnes[_parentNode.columnNum]].astype(bool).sum(axis=0)
+    nbZeroB = nbRows - nbNonZeroB
+
+    cp = ConditionalProbabilityTable(
+        [[False, False, (nbZeroA + nbZeroB) / (nbRows * 2)],
+         [False, True, (nbZeroA + nbNonZeroB) / (nbRows * 2)],
+
+         [True, False, (nbNonZeroA + nbZeroB) / (nbRows * 2)],
+         [True, True, (nbNonZeroA + nbNonZeroB) / (nbRows * 2)],
          ],
         [distribution])
 
@@ -122,10 +109,13 @@ def buildProbabilityTable(_tree, _network):
     return _network
 
 
-bayesnet = BayesianNetwork("Network")
+bayesnet = BayesianNetwork("Réseau")
 bayesnet = buildProbabilityTable(tree, bayesnet)
 
 bayesnet.bake()
-plt.figure(figsize=(50,25))
+plt.figure(figsize=(50, 25))
 bayesnet.plot()
 plt.show()
+
+with open('../data/reseau.json', 'w') as f:
+    f.write(bayesnet.to_json())

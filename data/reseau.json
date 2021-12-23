@@ -1,0 +1,2768 @@
+{
+    "class" : "BayesianNetwork",
+    "name" : "R\u00e9seau",
+    "structure" : [
+        [],
+        [
+            0
+        ],
+        [
+            1
+        ],
+        [
+            0
+        ],
+        [
+            0
+        ],
+        [
+            4
+        ],
+        [
+            5
+        ],
+        [
+            5
+        ],
+        [
+            0
+        ],
+        [
+            0
+        ],
+        [
+            0
+        ],
+        [
+            10
+        ],
+        [
+            11
+        ],
+        [
+            11
+        ],
+        [],
+        [],
+        [
+            15
+        ],
+        [
+            16
+        ],
+        [],
+        [
+            18
+        ],
+        [],
+        [
+            20
+        ],
+        [
+            20
+        ],
+        [
+            22
+        ],
+        [
+            23
+        ],
+        [
+            24
+        ],
+        [
+            24
+        ],
+        [
+            23
+        ],
+        [
+            22
+        ],
+        [
+            28
+        ],
+        [],
+        [],
+        [
+            31
+        ],
+        [
+            32
+        ],
+        [
+            33
+        ],
+        [],
+        [
+            35
+        ],
+        [
+            36
+        ],
+        [],
+        []
+    ],
+    "states" : [
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.4642857142857143,
+                        "True" : 0.5357142857142857
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Human development index",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5178571428571429"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5178571428571429"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Median age",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5178571428571429"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5178571428571429"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.4642857142857143,
+                                        "True" : 0.5357142857142857
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Tobacco consumption among people 15 years and older",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5178571428571429"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5178571428571429"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Life expectancy",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5178571428571429"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5178571428571429"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Literacy rate amoing the elderly (65+)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5327380952380952"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5327380952380952"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5178571428571429"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5178571428571429"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.4642857142857143,
+                                        "True" : 0.5357142857142857
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Alcohol consumption (litres)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5327380952380952"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5327380952380952"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.46726190476190477"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.46726190476190477"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5327380952380952"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5327380952380952"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.4642857142857143,
+                                                "True" : 0.5357142857142857
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Christianity (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5327380952380952"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.46726190476190477"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5327380952380952"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.46726190476190477"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.46726190476190477"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5327380952380952"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5327380952380952"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.4642857142857143,
+                                                "True" : 0.5357142857142857
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Age of criminal responsibility",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.4791666666666667"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5148809523809523"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.4851190476190476"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5208333333333334"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Woman age at first marriage",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5178571428571429"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5178571428571429"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Consumption of milk",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5178571428571429"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.48214285714285715"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5178571428571429"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.4642857142857143,
+                                "True" : 0.5357142857142857
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Food energy intake (kilocalories)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5178571428571429"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.48214285714285715"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5178571428571429"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.4642857142857143,
+                                        "True" : 0.5357142857142857
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Obesity rate (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.4642857142857143,
+                                                "True" : 0.5357142857142857
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Oil production per capita",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.48214285714285715"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5178571428571429"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.4642857142857143,
+                                                "True" : 0.5357142857142857
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Incarceration rate per 100,000",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Internet users (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Fertility rate  in 2019 (births/woman)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.5,
+                                "True" : 0.5
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Population growth rate",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5029761904761905"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5029761904761905"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.5,
+                                        "True" : 0.5
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Muslim (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.49404761904761907,
+                        "True" : 0.5059523809523809
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "under-five mortality rate (per 1000 live births)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49404761904761907"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5059523809523809"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.49404761904761907,
+                                "True" : 0.5059523809523809
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Suicide rates",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Minimum wage (US$)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.5,
+                                "True" : 0.5
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Meat consumption (kg/person)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.5,
+                                "True" : 0.5
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Scientific papers and technical journal articles per capita",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.5,
+                                        "True" : 0.5
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Democracy index",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5029761904761905"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5029761904761905"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.5,
+                                                "True" : 0.5
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Level of tertiary education",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.2648809523809524"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.2708333333333333"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.7291666666666666"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.7351190476190477"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5029761904761905"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5029761904761905"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "name" : "ConditionalProbabilityTable",
+                                        "table" : [
+                                            [
+                                                "False",
+                                                "False",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "False",
+                                                "True",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "True",
+                                                "False",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "True",
+                                                "True",
+                                                "0.5"
+                                            ]
+                                        ],
+                                        "dtypes" : [
+                                            "bool",
+                                            "bool",
+                                            "numpy.float64"
+                                        ],
+                                        "parents" : [
+                                            {
+                                                "class" : "Distribution",
+                                                "dtype" : "bool",
+                                                "name" : "DiscreteDistribution",
+                                                "parameters" : [
+                                                    {
+                                                        "False" : 0.5,
+                                                        "True" : 0.5
+                                                    }
+                                                ],
+                                                "frozen" : false
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Buddhism (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5029761904761905"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5029761904761905"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5029761904761905"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5029761904761905"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "name" : "ConditionalProbabilityTable",
+                                        "table" : [
+                                            [
+                                                "False",
+                                                "False",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "False",
+                                                "True",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "True",
+                                                "False",
+                                                "0.5"
+                                            ],
+                                            [
+                                                "True",
+                                                "True",
+                                                "0.5"
+                                            ]
+                                        ],
+                                        "dtypes" : [
+                                            "bool",
+                                            "bool",
+                                            "numpy.float64"
+                                        ],
+                                        "parents" : [
+                                            {
+                                                "class" : "Distribution",
+                                                "dtype" : "bool",
+                                                "name" : "DiscreteDistribution",
+                                                "parameters" : [
+                                                    {
+                                                        "False" : 0.5,
+                                                        "True" : 0.5
+                                                    }
+                                                ],
+                                                "frozen" : false
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Respect to external debt (% GDP)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49404761904761907"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.49404761904761907"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5059523809523809"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5059523809523809"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.5,
+                                                "True" : 0.5
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Spending on education (% of GDP)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.5,
+                                        "True" : 0.5
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Score of economic freedom",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.5,
+                                                "True" : 0.5
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Ookla Avg Download Speed Mbits/s",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Importance of religion",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "GDP (US$) per capita",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.5,
+                                "True" : 0.5
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Health expenditure per capita (US$)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.5,
+                                        "True" : 0.5
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Books published",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.45535714285714285"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.45535714285714285"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5446428571428571"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5446428571428571"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.5"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "name" : "ConditionalProbabilityTable",
+                                "table" : [
+                                    [
+                                        "False",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "False",
+                                        "True",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "False",
+                                        "0.5"
+                                    ],
+                                    [
+                                        "True",
+                                        "True",
+                                        "0.5"
+                                    ]
+                                ],
+                                "dtypes" : [
+                                    "bool",
+                                    "bool",
+                                    "numpy.float64"
+                                ],
+                                "parents" : [
+                                    {
+                                        "class" : "Distribution",
+                                        "dtype" : "bool",
+                                        "name" : "DiscreteDistribution",
+                                        "parameters" : [
+                                            {
+                                                "False" : 0.5,
+                                                "True" : 0.5
+                                            }
+                                        ],
+                                        "frozen" : false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Jewish (%)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.49404761904761907,
+                        "True" : 0.5059523809523809
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Average yearly temperature (celcius)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.5029761904761905"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5029761904761905"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "dtype" : "bool",
+                        "name" : "DiscreteDistribution",
+                        "parameters" : [
+                            {
+                                "False" : 0.49404761904761907,
+                                "True" : 0.5059523809523809
+                            }
+                        ],
+                        "frozen" : false
+                    }
+                ]
+            },
+            "name" : "Income ratios and Gini indices (WB Gini)",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "name" : "ConditionalProbabilityTable",
+                "table" : [
+                    [
+                        "False",
+                        "False",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "False",
+                        "True",
+                        "0.49702380952380953"
+                    ],
+                    [
+                        "True",
+                        "False",
+                        "0.5029761904761905"
+                    ],
+                    [
+                        "True",
+                        "True",
+                        "0.5029761904761905"
+                    ]
+                ],
+                "dtypes" : [
+                    "bool",
+                    "bool",
+                    "numpy.float64"
+                ],
+                "parents" : [
+                    {
+                        "class" : "Distribution",
+                        "name" : "ConditionalProbabilityTable",
+                        "table" : [
+                            [
+                                "False",
+                                "False",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "False",
+                                "True",
+                                "0.5029761904761905"
+                            ],
+                            [
+                                "True",
+                                "False",
+                                "0.49702380952380953"
+                            ],
+                            [
+                                "True",
+                                "True",
+                                "0.5029761904761905"
+                            ]
+                        ],
+                        "dtypes" : [
+                            "bool",
+                            "bool",
+                            "numpy.float64"
+                        ],
+                        "parents" : [
+                            {
+                                "class" : "Distribution",
+                                "dtype" : "bool",
+                                "name" : "DiscreteDistribution",
+                                "parameters" : [
+                                    {
+                                        "False" : 0.49404761904761907,
+                                        "True" : 0.5059523809523809
+                                    }
+                                ],
+                                "frozen" : false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name" : "Rate homicide victims per 100000 inhabitants",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Homeless population per 10,000",
+            "weight" : 1.0
+        },
+        {
+            "class" : "State",
+            "distribution" : {
+                "class" : "Distribution",
+                "dtype" : "bool",
+                "name" : "DiscreteDistribution",
+                "parameters" : [
+                    {
+                        "False" : 0.5,
+                        "True" : 0.5
+                    }
+                ],
+                "frozen" : false
+            },
+            "name" : "Military expenditures (% of GDP)",
+            "weight" : 1.0
+        }
+    ]
+}
